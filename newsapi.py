@@ -3,9 +3,11 @@ import click
 import restapi_ctl
 from clickaliasedgroup import ClickAliasedGroup
 
+
 @click.group(cls=ClickAliasedGroup)
 def main():
     pass
+
 
 @main.command('get')
 @click.argument('categories')
@@ -21,6 +23,7 @@ def get(categories):
         print(i['title'])
         print(i['url'])
         print()
+
 
 if __name__ == '__main__':
     main()
